@@ -583,12 +583,20 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-badge">🏆 北北基搬家首選 · 96% 客戶推薦</div>
-  <span class="hero-truck">🚛</span>
+
+  <!-- 插圖 -->
+  <div style="margin-bottom:24px;animation:fadeUp 0.8s ease;">
+    <img src="shangsin-illustration.png" alt="尚新精緻搬家服務插圖"
+      style="width:100%;max-width:600px;border-radius:20px;box-shadow:0 8px 32px rgba(139,94,60,0.2);display:block;margin:0 auto;"/>
+  </div>
+
+
+
   <h1>搬家找<span>尚新</span><br>你我都安心！</h1>
   <p class="hero-sub">五星級服務・平價收費・24小時免費估價</p>
   <div class="hero-buttons">
-    <a href="https://line.me/ti/p/_oPXHo9rr3" class="btn-primary">💬 LINE 立即估價</a>
-    <a href="tel:0800070177" class="btn-secondary">📞 免費專線撥打</a>
+    <a href="https://line.me/ti/p/_oPXHo9rr3" class="btn-primary" style="background:#06C755;box-shadow:0 4px 16px rgba(6,199,85,0.35);">💬 LINE 立即估價</a>
+    <a href="tel:0800070177" class="btn-secondary" style="background:var(--orange);box-shadow:0 4px 16px rgba(245,136,31,0.35);">📞 免費專線撥打</a>
   </div>
   <div class="hero-phones">
     <div class="phone-chip">📱 0932-066-893</div>
@@ -597,19 +605,7 @@
   </div>
 </section>
 
-<!-- PROMO BANNER -->
-<div style="padding: 24px 0;">
-  <div class="promo-banner reveal">
-    <h3>✨ 報價即折抵 <span>$500</span></h3>
-    <p>只要取得報價，搬家費用立刻為您節省 500 元！</p>
-    <div class="promo-items">
-      <div class="promo-item">📦 免費贈送 5 個紙箱</div>
-      <div class="promo-item">🏠 到府估價全免費</div>
-      <div class="promo-item">📅 平假日同一價格</div>
-    </div>
-    <a href="https://line.me/ti/p/_oPXHo9rr3" class="btn-primary" style="margin:0 auto;">💬 立即獲取優惠</a>
-  </div>
-</div>
+
 
 <!-- FEATURES -->
 <section class="features" id="features">
@@ -645,9 +641,9 @@
       <p>憑學生證享優惠，套房小量搬家首選，一車搞定</p>
     </div>
     <div class="feature-card reveal">
-      <span class="feature-icon">⏰</span>
-      <h3>24小時服務</h3>
-      <p>全天候服務，隨時為您提供搬家諮詢與估價</p>
+      <span class="feature-icon">🏠</span>
+      <h3>小資族・套房首選</h3>
+      <p>聰明省錢、快速搞定！1.75噸小車靈活機動，套房租屋族一車清空，省時又省荷包！</p>
     </div>
   </div>
 </section>
@@ -659,63 +655,89 @@
     <p>透明公開，無隱藏費用</p>
     <div class="title-line"></div>
   </div>
-  <div class="reveal">
-    <div class="price-types">
-      <button class="price-type-btn active" onclick="switchTable(this,'t1')">🚛 3.49噸車型（雙北）</button>
-      <button class="price-type-btn" onclick="switchTable(this,'t2')">🚐 1.9噸車型（雙北）</button>
-    </div>
 
-    <div id="t1" class="price-table-wrap">
-      <table class="price-table">
+  <!-- 車型說明 -->
+  <div class="reveal" style="max-width:600px;margin:0 auto 28px;">
+    <div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:16px;">
+      <div style="flex:1;min-width:200px;background:white;border-radius:20px;padding:20px;text-align:center;box-shadow:0 2px 12px var(--shadow);border:2px solid var(--orange-light);">
+        <div style="font-size:36px;margin-bottom:8px;">🚛</div>
+        <div style="font-weight:900;font-size:16px;color:var(--orange-dark);margin-bottom:4px;">3.49噸車型</div>
+        <div style="font-size:22px;font-weight:900;color:var(--orange);">$3,000 起</div>
+        <div style="font-size:12px;color:var(--brown);margin-top:4px;">適合一般家庭搬遷</div>
+      </div>
+      <div style="flex:1;min-width:200px;background:white;border-radius:20px;padding:20px;text-align:center;box-shadow:0 2px 12px var(--shadow);border:2px solid var(--teal-light);">
+        <div style="font-size:36px;margin-bottom:8px;">🚐</div>
+        <div style="font-weight:900;font-size:16px;color:var(--teal);margin-bottom:4px;">1.75噸車型</div>
+        <div style="font-size:22px;font-weight:900;color:var(--teal);">$1,800 起</div>
+        <div style="font-size:12px;color:var(--brown);margin-top:4px;">適合套房、小量搬家</div>
+      </div>
+    </div>
+    <div class="price-note">💡 實際費用依物品多寡、樓層、距離等因素調整，歡迎來電或 LINE 免費估價！</div>
+  </div>
+
+  <!-- 外縣市費用 -->
+  <div class="reveal" style="max-width:600px;margin:0 auto 24px;">
+    <div style="background:white;border-radius:20px;overflow:hidden;box-shadow:0 2px 12px var(--shadow);">
+      <div style="background:linear-gradient(90deg,var(--orange),var(--orange-light));padding:14px 20px;">
+        <h3 style="color:white;font-size:16px;font-weight:900;">🗺️ 外縣市里程費</h3>
+        <p style="color:rgba(255,255,255,0.85);font-size:12px;margin-top:2px;">以下高速公路交流道或市中心計算，五公里內為準</p>
+      </div>
+      <table style="width:100%;border-collapse:collapse;font-size:13px;">
         <thead>
-          <tr>
-            <th>搬出╲搬入</th>
-            <th>一樓</th>
-            <th>二樓</th>
-            <th>三樓</th>
-            <th>四樓</th>
-            <th>五樓</th>
-            <th>六樓</th>
+          <tr style="background:#FFF3E0;">
+            <th style="padding:10px 14px;text-align:left;color:var(--orange-dark);font-weight:700;">縣市名稱</th>
+            <th style="padding:10px 14px;text-align:right;color:var(--orange-dark);font-weight:700;">每車收費用</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td class="floor-label">一樓</td><td>3500</td><td>4000</td><td>4500</td><td>5000</td><td>5500</td><td>6000</td></tr>
-          <tr><td class="floor-label">二樓</td><td>4000</td><td>4500</td><td>5000</td><td>5500</td><td>6000</td><td>6500</td></tr>
-          <tr><td class="floor-label">三樓</td><td>4500</td><td>5000</td><td>5500</td><td>6000</td><td>6500</td><td>7000</td></tr>
-          <tr><td class="floor-label">四樓</td><td>5000</td><td>5500</td><td>6000</td><td>6500</td><td>7000</td><td>7500</td></tr>
-          <tr><td class="floor-label">五樓</td><td>5500</td><td>6000</td><td>6500</td><td>7000</td><td>7500</td><td>8000</td></tr>
-          <tr><td class="floor-label">六樓</td><td>6000</td><td>6500</td><td>7000</td><td>7500</td><td>8000</td><td>8500</td></tr>
+          <tr style="border-bottom:1px solid #F5ECD9;"><td style="padding:9px 14px;color:var(--text-mid);">土城、樹林、淡水、陽明山</td><td style="padding:9px 14px;text-align:right;font-weight:700;color:var(--orange-dark);">每車加收 $800 起</td></tr>
+          <tr style="background:#FFF8F0;border-bottom:1px solid #F5ECD9;"><td style="padding:9px 14px;color:var(--text-mid);">基隆、桃園</td><td style="padding:9px 14px;text-align:right;font-weight:700;color:var(--orange-dark);">$4,500</td></tr>
+          <tr style="border-bottom:1px solid #F5ECD9;"><td style="padding:9px 14px;color:var(--text-mid);">中壢、平鎮、楊梅、龍潭</td><td style="padding:9px 14px;text-align:right;font-weight:700;color:var(--orange-dark);">$5,200</td></tr>
+          <tr style="background:#FFF8F0;border-bottom:1px solid #F5ECD9;"><td style="padding:9px 14px;color:var(--text-mid);">新竹</td><td style="padding:9px 14px;text-align:right;font-weight:700;color:var(--orange-dark);">$6,500 起（依人員數）</td></tr>
+          <tr style="border-bottom:1px solid #F5ECD9;"><td style="padding:9px 14px;color:var(--text-mid);">苗栗</td><td style="padding:9px 14px;text-align:right;font-weight:700;color:var(--orange-dark);">$7,500 起（依人員數）</td></tr>
+          <tr style="background:#FFF8F0;border-bottom:1px solid #F5ECD9;"><td style="padding:9px 14px;color:var(--text-mid);">台中</td><td style="padding:9px 14px;text-align:right;font-weight:700;color:var(--orange-dark);">$9,500 起（依人員數）</td></tr>
+          <tr style="border-bottom:1px solid #F5ECD9;"><td style="padding:9px 14px;color:var(--text-mid);">南投、彰化</td><td style="padding:9px 14px;text-align:right;font-weight:700;color:var(--orange-dark);">$11,000 起（依人員數）</td></tr>
+          <tr style="background:#FFF8F0;border-bottom:1px solid #F5ECD9;"><td style="padding:9px 14px;color:var(--text-mid);">雲林</td><td style="padding:9px 14px;text-align:right;font-weight:700;color:var(--orange-dark);">$14,000 起（依人員數）</td></tr>
+          <tr style="border-bottom:1px solid #F5ECD9;"><td style="padding:9px 14px;color:var(--text-mid);">嘉義</td><td style="padding:9px 14px;text-align:right;font-weight:700;color:var(--orange-dark);">$15,000 起（依人員數）</td></tr>
+          <tr style="background:#FFF8F0;border-bottom:1px solid #F5ECD9;"><td style="padding:9px 14px;color:var(--text-mid);">台南</td><td style="padding:9px 14px;text-align:right;font-weight:700;color:var(--orange-dark);">$16,000 起（依人員數）</td></tr>
+          <tr style="border-bottom:1px solid #F5ECD9;"><td style="padding:9px 14px;color:var(--text-mid);">高雄</td><td style="padding:9px 14px;text-align:right;font-weight:700;color:var(--orange-dark);">$18,000 起（依人員數）</td></tr>
+          <tr style="background:#FFF8F0;border-bottom:1px solid #F5ECD9;"><td style="padding:9px 14px;color:var(--text-mid);">屏東</td><td style="padding:9px 14px;text-align:right;font-weight:700;color:var(--orange-dark);">$19,000 起（依人員數）</td></tr>
+          <tr style="border-bottom:1px solid #F5ECD9;"><td style="padding:9px 14px;color:var(--text-mid);">宜蘭</td><td style="padding:9px 14px;text-align:right;font-weight:700;color:var(--orange-dark);">$6,000 起（依人員數）</td></tr>
+          <tr style="background:#FFF8F0;border-bottom:1px solid #F5ECD9;"><td style="padding:9px 14px;color:var(--text-mid);">花蓮</td><td style="padding:9px 14px;text-align:right;font-weight:700;color:var(--orange-dark);">$14,000 起（依人員數）</td></tr>
+          <tr><td style="padding:9px 14px;color:var(--text-mid);">台東</td><td style="padding:9px 14px;text-align:right;font-weight:700;color:var(--orange-dark);">$19,000 起（依人員數）</td></tr>
         </tbody>
       </table>
     </div>
+  </div>
 
-    <div id="t2" class="price-table-wrap" style="display:none;">
-      <table class="price-table">
+  <!-- 特殊費用 -->
+  <div class="reveal" style="max-width:600px;margin:0 auto;">
+    <div style="background:white;border-radius:20px;overflow:hidden;box-shadow:0 2px 12px var(--shadow);">
+      <div style="background:linear-gradient(90deg,var(--teal),var(--teal-light));padding:14px 20px;">
+        <h3 style="color:white;font-size:16px;font-weight:900;">⚠️ 特殊加價項目</h3>
+      </div>
+      <table style="width:100%;border-collapse:collapse;font-size:13px;">
         <thead>
-          <tr>
-            <th>搬出╲搬入</th>
-            <th>一樓</th>
-            <th>二樓</th>
-            <th>三樓</th>
-            <th>四樓</th>
-            <th>五樓</th>
-            <th>六樓</th>
+          <tr style="background:#F0FAF9;">
+            <th style="padding:10px 14px;text-align:left;color:var(--teal);font-weight:700;">費用名稱</th>
+            <th style="padding:10px 14px;text-align:left;color:var(--teal);font-weight:700;">收費方式</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td class="floor-label">一樓</td><td>1800</td><td>2000</td><td>2200</td><td>2400</td><td>2600</td><td>2800</td></tr>
-          <tr><td class="floor-label">二樓</td><td>2000</td><td>2200</td><td>2400</td><td>2600</td><td>2800</td><td>3000</td></tr>
-          <tr><td class="floor-label">三樓</td><td>2200</td><td>2400</td><td>2600</td><td>2800</td><td>3000</td><td>3200</td></tr>
-          <tr><td class="floor-label">四樓</td><td>2400</td><td>2600</td><td>2800</td><td>3000</td><td>3200</td><td>3400</td></tr>
-          <tr><td class="floor-label">五樓</td><td>2600</td><td>2800</td><td>3000</td><td>3200</td><td>3400</td><td>3600</td></tr>
-          <tr><td class="floor-label">六樓</td><td>2800</td><td>3000</td><td>3200</td><td>3400</td><td>3600</td><td>3800</td></tr>
+          <tr style="border-bottom:1px solid #E8F5F4;"><td style="padding:9px 14px;font-weight:700;color:var(--text-dark);">長距離搬運費</td><td style="padding:9px 14px;color:var(--text-mid);">每20公尺每車 $500（20公尺以內免計）</td></tr>
+          <tr style="background:#F7FFFE;border-bottom:1px solid #E8F5F4;"><td style="padding:9px 14px;font-weight:700;color:var(--text-dark);">廢棄物處理費</td><td style="padding:9px 14px;color:var(--text-mid);">每車 $3,500 起（每層加收 $300），處理場收費 $5,000～$10,000 起</td></tr>
+          <tr style="border-bottom:1px solid #E8F5F4;"><td style="padding:9px 14px;font-weight:700;color:var(--text-dark);">特別時間費用</td><td style="padding:9px 14px;color:var(--text-mid);">每車加收 $1,000 起（正常出車時間 09:00～18:00）</td></tr>
+          <tr style="background:#F7FFFE;border-bottom:1px solid #E8F5F4;"><td style="padding:9px 14px;font-weight:700;color:var(--text-dark);">多點送貨費用</td><td style="padding:9px 14px;color:var(--text-mid);">至第二地以上 $500 起計費</td></tr>
+          <tr style="border-bottom:1px solid #E8F5F4;"><td style="padding:9px 14px;font-weight:700;color:var(--text-dark);">家俱拆卸費用</td><td style="padding:9px 14px;color:var(--text-mid);">系統家具、DIY家具拆裝另計（單物品10顆螺絲以內不收費）</td></tr>
+          <tr style="background:#F7FFFE;border-bottom:1px solid #E8F5F4;"><td style="padding:9px 14px;font-weight:700;color:var(--text-dark);">超重物品搬運費</td><td style="padding:9px 14px;color:var(--text-mid);">單件每上或下一層樓梯 $100 起（如進口雙門冰箱、二五噸以上冷氣）</td></tr>
+          <tr style="border-bottom:1px solid #E8F5F4;"><td style="padding:9px 14px;font-weight:700;color:var(--text-dark);">鋼琴（立式）</td><td style="padding:9px 14px;color:var(--text-mid);">每上或下壹層樓 $500 起，基本費用 $3,500（吊車另計）</td></tr>
+          <tr style="background:#F7FFFE;border-bottom:1px solid #E8F5F4;"><td style="padding:9px 14px;font-weight:700;color:var(--text-dark);">特殊物品</td><td style="padding:9px 14px;color:var(--text-mid);">視量大小另議（如金庫、原木桌、按摩椅、跑步機）</td></tr>
+          <tr><td style="padding:9px 14px;font-weight:700;color:var(--text-dark);">書籍及高密度物件</td><td style="padding:9px 14px;color:var(--text-mid);">上或下壹層樓梯每箱 $50 起（12件以內不收費，中型箱）</td></tr>
         </tbody>
       </table>
-    </div>
-
-    <div class="price-note">
-      ⚠️ 以上為基本參考價格，實際費用依物品多寡、距離等因素調整。<br>
-      偏遠地區另外收費。如需準確報價，請直接聯繫我們！
+      <div style="padding:14px;background:#F0FAF9;font-size:12px;color:var(--brown);">
+        ※ 如有以上未能載明之特殊要求，請於詢問時事先說明您的具體搬動條件，感謝配合。
+      </div>
     </div>
   </div>
 </section>
