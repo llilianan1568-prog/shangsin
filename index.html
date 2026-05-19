@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>尚新精緻搬家 | 北北基搬家首選</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FDF6EC;
+    --warm-white: #FFFBF4;
+    --orange: #F5881F;
+    --orange-light: #FFB347;
+    --orange-dark: #D96D0A;
+    --teal: #2A9D8F;
+    --teal-light: #52B5A8;
+    --brown: #8B5E3C;
+    --brown-light: #C4956A;
+    --text-dark: #2D2013;
+    --text-mid: #5C3D1E;
+    --shadow: rgba(139,94,60,0.15);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans TC', sans-serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    background: var(--warm-white);
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px var(--shadow);
+    border-bottom: 3px solid var(--orange);
+  }
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .nav-logo .logo-icon {
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(135deg, var(--orange), var(--orange-light));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+  }
+  .nav-logo-text {
+    line-height: 1.2;
+  }
+  .nav-logo-text .brand { font-size: 17px; font-weight: 900; color: var(--orange-dark); }
+  .nav-logo-text .sub { font-size: 11px; color: var(--brown); }
+  .nav-links {
+    display: flex;
+    gap: 6px;
+    list-style: none;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: var(--text-mid);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 20px;
+    transition: all 0.2s;
+  }
+  .nav-links a:hover {
+    background: var(--orange);
+    color: white;
+  }
+  .nav-cta {
+    background: var(--teal);
+    color: white !important;
+    border-radius: 20px !important;
+  }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 40%, #FFF8E1 100%);
+    padding: 60px 24px 40px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 220px; height: 220px;
+    background: radial-gradient(circle, rgba(245,136,31,0.18) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; left: -40px;
+    width: 180px; height: 180px;
+    background: radial-gradient(circle, rgba(42,157,143,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: var(--orange);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 16px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+    animation: fadeDown 0.6s ease;
+  }
+  .hero h1 {
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--text-dark);
+    line-height: 1.3;
+    margin-bottom: 8px;
+    animation: fadeDown 0.7s ease;
+  }
+  .hero h1 span { color: var(--orange); }
+  .hero-sub {
+    font-size: 16px;
+    color: var(--text-mid);
+    margin-bottom: 28px;
+    animation: fadeDown 0.8s ease;
+  }
+
+  .hero-truck {
+    font-size: 80px;
+    margin-bottom: 24px;
+    display: block;
+    animation: driveIn 1s ease;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeUp 0.9s ease;
+  }
+  .btn-primary {
+    background: var(--orange);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 16px rgba(245,136,31,0.35);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(245,136,31,0.45); }
+  .btn-secondary {
+    background: var(--teal);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 16px rgba(42,157,143,0.3);
+    transition: transform 0.2s;
+  }
+  .btn-secondary:hover { transform: translateY(-2px); }
+
+  .hero-phones {
+    margin-top: 24px;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .phone-chip {
+    background: white;
+    border: 2px solid var(--orange-light);
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--orange-dark);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* SECTION COMMON */
+  section { padding: 52px 24px; }
+  .section-title {
+    text-align: center;
+    margin-bottom: 36px;
+  }
+  .section-title h2 {
+    font-size: 26px;
+    font-weight: 900;
+    color: var(--text-dark);
+    margin-bottom: 6px;
+  }
+  .section-title h2 span { color: var(--orange); }
+  .section-title p { color: var(--brown); font-size: 14px; }
+  .title-line {
+    width: 50px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--orange), var(--orange-light));
+    border-radius: 4px;
+    margin: 10px auto 0;
+  }
+
+  /* FEATURES */
+  .features { background: var(--warm-white); }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .feature-card {
+    background: var(--cream);
+    border-radius: 20px;
+    padding: 20px 16px;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: all 0.25s;
+    box-shadow: 0 2px 12px var(--shadow);
+  }
+  .feature-card:hover {
+    border-color: var(--orange-light);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px var(--shadow);
+  }
+  .feature-icon {
+    font-size: 38px;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .feature-card h3 {
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 6px;
+  }
+  .feature-card p {
+    font-size: 12px;
+    color: var(--brown);
+    line-height: 1.6;
+  }
+  .feature-card.highlight {
+    background: linear-gradient(135deg, var(--orange), var(--orange-light));
+    color: white;
+  }
+  .feature-card.highlight h3, .feature-card.highlight p { color: white; }
+
+  /* PROMO BANNER */
+  .promo-banner {
+    background: linear-gradient(135deg, var(--teal), var(--teal-light));
+    margin: 0 24px;
+    border-radius: 24px;
+    padding: 28px 24px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 8px 32px rgba(42,157,143,0.3);
+  }
+  .promo-banner h3 {
+    font-size: 22px;
+    font-weight: 900;
+    margin-bottom: 8px;
+  }
+  .promo-banner h3 span {
+    color: #FFD54F;
+    font-size: 28px;
+  }
+  .promo-banner p { font-size: 13px; opacity: 0.9; margin-bottom: 16px; }
+  .promo-items {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+  }
+  .promo-item {
+    background: rgba(255,255,255,0.2);
+    border-radius: 12px;
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* PRICING */
+  .pricing { background: var(--cream); }
+  .price-table-wrap {
+    overflow-x: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px var(--shadow);
+  }
+  .price-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    min-width: 340px;
+  }
+  .price-table thead tr {
+    background: linear-gradient(90deg, var(--orange), var(--orange-light));
+    color: white;
+  }
+  .price-table th {
+    padding: 12px 8px;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+  }
+  .price-table td {
+    padding: 10px 8px;
+    text-align: center;
+    font-size: 13px;
+    border-bottom: 1px solid #F5ECD9;
+    color: var(--text-mid);
+  }
+  .price-table tr:last-child td { border-bottom: none; }
+  .price-table tbody tr:nth-child(even) { background: #FFF8F0; }
+  .price-table tbody tr:hover { background: #FFE8C8; }
+  .price-table .floor-label {
+    font-weight: 700;
+    color: var(--orange-dark);
+    background: #FFF3E0;
+  }
+  .price-note {
+    margin-top: 14px;
+    background: #FFF3E0;
+    border-left: 4px solid var(--orange);
+    border-radius: 0 12px 12px 0;
+    padding: 12px 16px;
+    font-size: 12px;
+    color: var(--brown);
+  }
+  .price-types {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .price-type-btn {
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: 2px solid var(--orange);
+    background: transparent;
+    color: var(--orange-dark);
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .price-type-btn.active {
+    background: var(--orange);
+    color: white;
+  }
+
+  /* PROCESS */
+  .process { background: var(--warm-white); }
+  .process-steps {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .process-step {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding-bottom: 24px;
+    position: relative;
+  }
+  .process-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 22px;
+    top: 50px;
+    width: 3px;
+    height: calc(100% - 30px);
+    background: linear-gradient(180deg, var(--orange-light), transparent);
+    border-radius: 4px;
+  }
+  .step-num {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    background: linear-gradient(135deg, var(--orange), var(--orange-light));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 900;
+    color: white;
+    box-shadow: 0 4px 12px rgba(245,136,31,0.35);
+  }
+  .step-content h4 {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 4px;
+  }
+  .step-content p {
+    font-size: 13px;
+    color: var(--brown);
+    line-height: 1.6;
+  }
+
+  /* ABOUT */
+  .about {
+    background: linear-gradient(135deg, #FFF3E0, #FFF8E1);
+    position: relative;
+    overflow: hidden;
+  }
+  .about-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .about-emoji { font-size: 64px; margin-bottom: 16px; display: block; }
+  .about-content p {
+    font-size: 14px;
+    color: var(--text-mid);
+    line-height: 1.9;
+    margin-bottom: 12px;
+  }
+  .about-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .about-tag {
+    background: var(--orange);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .about-tag.teal { background: var(--teal); }
+
+  /* CONTACT */
+  .contact { background: var(--warm-white); }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    max-width: 600px;
+    margin: 0 auto 24px;
+  }
+  .contact-card {
+    background: var(--cream);
+    border-radius: 20px;
+    padding: 20px 16px;
+    text-align: center;
+    box-shadow: 0 2px 12px var(--shadow);
+    border: 2px solid #F5DEB3;
+  }
+  .contact-card .c-icon { font-size: 30px; margin-bottom: 8px; display: block; }
+  .contact-card h4 { font-size: 13px; font-weight: 700; color: var(--brown); margin-bottom: 4px; }
+  .contact-card a, .contact-card p {
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--orange-dark);
+    text-decoration: none;
+  }
+  .contact-card.full {
+    grid-column: 1 / -1;
+  }
+  .line-btn {
+    display: block;
+    background: #06C755;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 900;
+    text-decoration: none;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 16px rgba(6,199,85,0.35);
+    transition: transform 0.2s;
+  }
+  .line-btn:hover { transform: translateY(-2px); }
+
+  /* FOOTER */
+  footer {
+    background: var(--text-dark);
+    color: rgba(255,255,255,0.8);
+    text-align: center;
+    padding: 28px 24px;
+    font-size: 12px;
+    line-height: 2;
+  }
+  footer strong { color: var(--orange-light); font-size: 14px; }
+
+  /* ANIMATIONS */
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes driveIn {
+    from { opacity: 0; transform: translateX(-60px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  /* SCROLL REVEAL */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* MOBILE */
+  @media (max-width: 480px) {
+    .nav-links { display: none; }
+    .hero h1 { font-size: 28px; }
+    .features-grid { grid-template-columns: repeat(2, 1fr); }
+    .contact-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="logo-icon">🚛</div>
+    <div class="nav-logo-text">
+      <div class="brand">尚新精緻搬家</div>
+      <div class="sub">ShangSin Movers</div>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#features">服務特色</a></li>
+    <li><a href="#pricing">計價方式</a></li>
+    <li><a href="#process">搬運流程</a></li>
+    <li><a href="#contact" class="nav-cta">聯絡我們</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">🏆 北北基搬家首選 · 96% 客戶推薦</div>
+  <span class="hero-truck">🚛</span>
+  <h1>搬家找<span>尚新</span><br>你我都安心！</h1>
+  <p class="hero-sub">五星級服務・平價收費・24小時免費估價</p>
+  <div class="hero-buttons">
+    <a href="https://line.me/ti/p/_oPXHo9rr3" class="btn-primary">💬 LINE 立即估價</a>
+    <a href="tel:0800070177" class="btn-secondary">📞 免費專線撥打</a>
+  </div>
+  <div class="hero-phones">
+    <div class="phone-chip">📱 0932-066-893</div>
+    <div class="phone-chip">☎️ 02-2942-6708</div>
+    <div class="phone-chip">🆓 0800-070-177</div>
+  </div>
+</section>
+
+<!-- PROMO BANNER -->
+<div style="padding: 24px 0;">
+  <div class="promo-banner reveal">
+    <h3>✨ 報價即折抵 <span>$500</span></h3>
+    <p>只要取得報價，搬家費用立刻為您節省 500 元！</p>
+    <div class="promo-items">
+      <div class="promo-item">📦 免費贈送 5 個紙箱</div>
+      <div class="promo-item">🏠 到府估價全免費</div>
+      <div class="promo-item">📅 平假日同一價格</div>
+    </div>
+    <a href="https://line.me/ti/p/_oPXHo9rr3" class="btn-primary" style="margin:0 auto;">💬 立即獲取優惠</a>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<section class="features" id="features">
+  <div class="section-title reveal">
+    <h2>為什麼選擇<span>尚新</span>？</h2>
+    <p>我們提供的不只是搬家服務</p>
+    <div class="title-line"></div>
+  </div>
+  <div class="features-grid">
+    <div class="feature-card reveal">
+      <span class="feature-icon">👨‍🔧</span>
+      <h3>專業師傅團隊</h3>
+      <p>傳承第一代老闆精神，服務十幾年的老經驗師傅</p>
+    </div>
+    <div class="feature-card highlight reveal">
+      <span class="feature-icon">💰</span>
+      <h3>價格公開透明</h3>
+      <p>拒絕亂開價，平日假日收費一致，物超所值</p>
+    </div>
+    <div class="feature-card reveal">
+      <span class="feature-icon">🛡️</span>
+      <h3>細心保護傢俱</h3>
+      <p>專業包裝保護，讓每件物品安全送達新居</p>
+    </div>
+    <div class="feature-card reveal">
+      <span class="feature-icon">📋</span>
+      <h3>流程制度化</h3>
+      <p>專業化、制度化，提供客製化搬家服務方案</p>
+    </div>
+    <div class="feature-card reveal">
+      <span class="feature-icon">🎓</span>
+      <h3>學生專案優惠</h3>
+      <p>憑學生證享優惠，套房小量搬家首選，一車搞定</p>
+    </div>
+    <div class="feature-card reveal">
+      <span class="feature-icon">⏰</span>
+      <h3>24小時服務</h3>
+      <p>全天候服務，隨時為您提供搬家諮詢與估價</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="section-title reveal">
+    <h2><span>計價</span>方式</h2>
+    <p>透明公開，無隱藏費用</p>
+    <div class="title-line"></div>
+  </div>
+  <div class="reveal">
+    <div class="price-types">
+      <button class="price-type-btn active" onclick="switchTable(this,'t1')">🚛 3.49噸車型（雙北）</button>
+      <button class="price-type-btn" onclick="switchTable(this,'t2')">🚐 1.9噸車型（雙北）</button>
+    </div>
+
+    <div id="t1" class="price-table-wrap">
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th>搬出╲搬入</th>
+            <th>一樓</th>
+            <th>二樓</th>
+            <th>三樓</th>
+            <th>四樓</th>
+            <th>五樓</th>
+            <th>六樓</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="floor-label">一樓</td><td>3500</td><td>4000</td><td>4500</td><td>5000</td><td>5500</td><td>6000</td></tr>
+          <tr><td class="floor-label">二樓</td><td>4000</td><td>4500</td><td>5000</td><td>5500</td><td>6000</td><td>6500</td></tr>
+          <tr><td class="floor-label">三樓</td><td>4500</td><td>5000</td><td>5500</td><td>6000</td><td>6500</td><td>7000</td></tr>
+          <tr><td class="floor-label">四樓</td><td>5000</td><td>5500</td><td>6000</td><td>6500</td><td>7000</td><td>7500</td></tr>
+          <tr><td class="floor-label">五樓</td><td>5500</td><td>6000</td><td>6500</td><td>7000</td><td>7500</td><td>8000</td></tr>
+          <tr><td class="floor-label">六樓</td><td>6000</td><td>6500</td><td>7000</td><td>7500</td><td>8000</td><td>8500</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="t2" class="price-table-wrap" style="display:none;">
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th>搬出╲搬入</th>
+            <th>一樓</th>
+            <th>二樓</th>
+            <th>三樓</th>
+            <th>四樓</th>
+            <th>五樓</th>
+            <th>六樓</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="floor-label">一樓</td><td>1800</td><td>2000</td><td>2200</td><td>2400</td><td>2600</td><td>2800</td></tr>
+          <tr><td class="floor-label">二樓</td><td>2000</td><td>2200</td><td>2400</td><td>2600</td><td>2800</td><td>3000</td></tr>
+          <tr><td class="floor-label">三樓</td><td>2200</td><td>2400</td><td>2600</td><td>2800</td><td>3000</td><td>3200</td></tr>
+          <tr><td class="floor-label">四樓</td><td>2400</td><td>2600</td><td>2800</td><td>3000</td><td>3200</td><td>3400</td></tr>
+          <tr><td class="floor-label">五樓</td><td>2600</td><td>2800</td><td>3000</td><td>3200</td><td>3400</td><td>3600</td></tr>
+          <tr><td class="floor-label">六樓</td><td>2800</td><td>3000</td><td>3200</td><td>3400</td><td>3600</td><td>3800</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="price-note">
+      ⚠️ 以上為基本參考價格，實際費用依物品多寡、距離等因素調整。<br>
+      偏遠地區另外收費。如需準確報價，請直接聯繫我們！
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="section-title reveal">
+    <h2><span>搬運</span>流程</h2>
+    <p>簡單 4 步驟，輕鬆完成搬家</p>
+    <div class="title-line"></div>
+  </div>
+  <div class="process-steps">
+    <div class="process-step reveal">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h4>📞 聯繫估價</h4>
+        <p>透過電話、LINE 或官網聯絡我們，告知搬家需求，免費提供報價。</p>
+      </div>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h4>🗓️ 確認日期</h4>
+        <p>雙方確認搬家日期與時間，安排專業師傅前往服務。</p>
+      </div>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h4>📦 專業打包</h4>
+        <p>師傅到府後進行專業包裝保護，確保每件傢俱安全無虞。</p>
+      </div>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h4>🏠 安全送達</h4>
+        <p>搬運至新居並協助擺放，完成後確認物品無誤，搬家大功告成！</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-content">
+    <span class="about-emoji reveal">🏡</span>
+    <div class="section-title reveal">
+      <h2>關於<span>尚新</span></h2>
+      <div class="title-line"></div>
+    </div>
+    <p class="reveal">「尚新精緻搬家」是累積多年搬家經驗的專業團隊，師傅們都是傳承第一代老闆的精神及服務十幾年的老經驗。</p>
+    <p class="reveal">尚新搬家更能了解客戶真正的需要，<strong>『用心經營、視如己出』</strong>，提供制度化、專業化、流程化的服務精神，讓每位客戶都能有物超所值的感受！</p>
+    <div class="about-tags reveal">
+      <span class="about-tag">✅ 多年搬家經驗</span>
+      <span class="about-tag teal">🎯 客製化服務</span>
+      <span class="about-tag">💯 96% 好評推薦</span>
+      <span class="about-tag teal">📍 北北基首選</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-title reveal">
+    <h2><span>聯絡</span>我們</h2>
+    <p>24小時隨時為您服務</p>
+    <div class="title-line"></div>
+  </div>
+  <div class="contact-grid reveal">
+    <div class="contact-card">
+      <span class="c-icon">📱</span>
+      <h4>手機直播</h4>
+      <a href="tel:0932066893">0932-066-893</a>
+    </div>
+    <div class="contact-card">
+      <span class="c-icon">☎️</span>
+      <h4>服務電話</h4>
+      <a href="tel:0229426708">02-2942-6708</a>
+    </div>
+    <div class="contact-card">
+      <span class="c-icon">🆓</span>
+      <h4>免付費專線</h4>
+      <a href="tel:0800070177">0800-070-177</a>
+    </div>
+    <div class="contact-card">
+      <span class="c-icon">✉️</span>
+      <h4>電子信箱</h4>
+      <a href="mailto:llilianan1568@gmail.com" style="font-size:11px;">llilianan1568@gmail.com</a>
+    </div>
+    <div class="contact-card full">
+      <span class="c-icon">📍</span>
+      <h4>公司地址</h4>
+      <p>新北市中和區秀朗路三段10巷14弄108號之三</p>
+    </div>
+  </div>
+  <a href="https://line.me/ti/p/_oPXHo9rr3" class="line-btn reveal">
+    💬 LINE 線上估價 — 3分鐘快速報價
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <strong>尚新精緻搬家 ShangSin Movers</strong><br>
+  新北市中和區秀朗路三段10巷14弄108號之三<br>
+  Tel: 0932-066-893 ｜ 0800-070-177<br><br>
+  © 2024 尚新精緻搬家. All Rights Reserved.
+</footer>
+
+<script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(r => observer.observe(r));
+
+  // Table switch
+  function switchTable(btn, id) {
+    document.querySelectorAll('.price-type-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('t1').style.display = 'none';
+    document.getElementById('t2').style.display = 'none';
+    document.getElementById(id).style.display = 'block';
+  }
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const t = document.querySelector(a.getAttribute('href'));
+      if (t) t.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
+</body>
+</html>
